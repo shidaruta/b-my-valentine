@@ -1,0 +1,440 @@
+body {
+  margin: 0;
+  font-family: "Quicksand", 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* For loading screen */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+
+}
+
+.video-loading {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.welcome-text {
+  position: absolute;
+  top: 25%;
+  left: 0; /* Start from the left */
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: red;
+  font-weight: bold;
+  opacity: 0;
+  animation: slide-in 2s forwards, move-right 2s 2s forwards;
+}
+
+/* Animation for sliding in from the left */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    left: -100%; /* Start off-screen on the left */
+  }
+  to {
+    opacity: 1;
+    left: 50%; /* Moves to the center */
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+/* Animation for moving to the right */
+@keyframes move-right {
+  from {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  to {
+    left: 100%; /* Moves off-screen to the right */
+    opacity: 0;
+  }
+}
+
+/* Home Page */
+
+.landing{
+  /* background-image: url(../public/assets/catbg.jpg); */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.love-btn{
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  width: 80px; /* Set button width */
+  height: 80px;
+  border: 0px;
+  cursor: pointer;
+  background-color: transparent; /* Optional: set button background color */
+  overflow: hidden;
+}
+
+.love-btn img{
+  width: 100%; /* Ensures image fills the entire width of the button */
+  height: 100%; /* Ensures image fills the entire height of the button */
+  object-fit: cover;
+}
+
+
+
+/* Valentine Question */
+.question-box{
+  display: flex;
+  flex-direction: column;
+}
+.options{
+  display: flex;
+  justify-content: space-between;
+}
+body {
+  background-color: #fff0f2;
+
+}
+
+.buttons {
+  width: 100px;
+  height: 50px;
+  font-family: "Quicksand";
+  font-weight: 600;
+  font-size: 25px;
+  position: absolute;
+  border: 2px solid #f2c2c8;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+#button {
+  background: linear-gradient(70deg, #FFE5E9, #FFC3CC);
+  color: #F05757;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 40px;
+  margin-left: -120px;
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#heart1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -150px;
+    background-color: #ffdae0;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+#heart2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: -50px;
+    background-color: #ffdae0;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+#heart3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -50px;
+    background-color: #ffdae0;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+#heart4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: 100px;
+    background-color: #ffdae0;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+#heart5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: 100px;
+    background-color: #ffdae0;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+.hearts:after {
+    background-color: #ffdae0;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .hearts:before {
+    background-color: #ffdae0;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+.love:hover > #heart1 {
+  animation-name: hearts1;
+  animation-duration: 1.1s;
+  animation-iteration-count: infinite;
+}
+.love:hover > #heart2 {
+  animation-name: hearts2;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+}
+.love:hover > #heart3 {
+  animation-name: hearts3;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+}
+.love:hover > #heart4 {
+  animation-name: hearts4;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.love:hover > #heart5 {
+  animation-name: hearts5;
+  animation-duration: 1.1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hearts1 {
+  0% {
+    transform: scale(0.1, 0.1) rotate(-45deg);
+    opacity: 0.8;
+  } 
+}
+@keyframes hearts2 {
+  20% {
+    transform: scale(0.2, 0.2) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+@keyframes hearts3 {
+  40% {
+    transform: scale(0.3, 0.3) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+@keyframes hearts4 {
+  60% {
+    transform: scale(0.4, 0.4) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+@keyframes hearts5 {
+  80% {
+    transform: scale(0.6, 0.6) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+
+#button:active {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.23);
+  transform: scale(0.99);
+}
+
+.no-btn{
+  font-family: "Quicksand";
+  font-weight: 500;
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  position: absolute;
+  border: 2px solid #f2c2c8;
+  border-radius: 9px;
+  margin-left: 180px;
+  margin-top: 5px; 
+  cursor: pointer;
+}
+
+.sliding-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-in-img {
+  position: absolute;
+  width: 350px;
+  opacity: 0;
+  animation: slide-in 0.5s forwards, slide-out 1.5s forwards 1s;
+}
+.slide-in-img.left {
+  left: -350px; /* Adjusted for new size */
+  top: -220px;
+  animation: slide-in 0.5s forwards, slide-out 1.5s forwards 1s;
+}
+
+.slide-in-img.right {
+  right: -350px; /* Adjusted for new size */
+  top: -220px;
+  animation: slide-in 0.5s forwards, slide-out 1.5s forwards 1s;
+}
+
+.slide-in-img.center {
+  bottom: -250px; /* Adjusted for new size */
+  animation: slide-in 0.5s forwards, slide-out 1.5s forwards 1s;
+}
+/* Animation for sliding in */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for sliding out */
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.video-container {
+  position: fixed; /* Position video relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: 9999; /* Ensure it's above other content */
+  background-color: black; /* Optional: Add a black background for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: 100%; /* Fill the width of the screen */
+  height: 100%; /* Fill the height of the screen */
+  object-fit: cover; /* Ensure the video covers the full screen, cropping if necessary */
+}
+
+.landing.background-success {
+  background-image: url("/public/assets/bg2.jpg"); /* Example background change */
+}
+
+
+.card-description {
+  font-size: 1.2rem;
+}
+
+/* .fireworks-animation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+ */
+ .content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between card & slideshow */
+  flex-wrap: wrap; /* Stacks on smaller screens */
+  margin-top: 20px;
+}
+
+.celebration-card {
+  width: 300px; /* Adjust size */
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100px;
+  height: auto;
+}
+
+.slideshow {
+  width: 400px; /* Adjust based on layout */
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Ensure the current image is visible */
+.slideshow img:nth-child(1) {
+  opacity: 1;
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column;
+  }
+}
